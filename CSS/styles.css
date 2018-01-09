@@ -211,12 +211,13 @@ iframe{
     width: 49%;
     text-align: center;
 }
+
 ul{
     list-style-type: none;
 }
 li{
-    display: inline-block;
     margin: 1em;
+	display: inline-block;
 }
 .active{
 	font-weight:bold;
@@ -241,5 +242,11 @@ a{
 	width:80%;	
 	background-image: url('../Assets/mask.png');
 	background-size:contain;
+	}
+	iframe{
+		width: 80%
+	}
+	#mask{
+		overflow:hidden;
 	}
 }
