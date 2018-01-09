@@ -206,7 +206,7 @@ iframe{
 }
 	nav{
     position: absolute;
-    top: 1em;
+    top: 0;
     left: 50%;
     width: 49%;
     text-align: center;
@@ -214,9 +214,10 @@ iframe{
 
 ul{
     list-style-type: none;
+	
 }
 li{
-	
+	padding:1em;
 	display: inline-block;
 	font-size: 1em;
 }
