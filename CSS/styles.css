@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Raleway');
+
+@media screen and (min-width: 800px) {
+  body{
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    margin: 0px;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#wrapper{
+width:100vw;
+height:100vh;
+position:absolute;
+top:0;
+right:0;
+bottom:0;
+left:0;
+}
+header{
+    background-color: #0D1F2D;
+    color: #FFFFFF;
+    width: 100%;
+    height: 10%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 0;
+    display: block;
+	position: sticky;
+}
+h1{
+    height:100;
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+}
+.highlight{
+    font-family: 'Poiret One', cursive;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+nav{
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    width: 49%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    margin: 1em;
+}
+.active{
+	font-weight:bold;
+}
+#main{
+	width:100%;
+    color: #000000;
+    background-color: #546a7b;
+    width:100%;
+    height:30%;
+	padding:10em;
+	text-align: center;
+}
+article{
+	position: relative;
+    width:30%;
+	display: inline-block;
+	margin:0;
+	padding:0;
+}
+.left{
+    
+}
+#fingergun{
+	position: absolute;
+    width:30%;
+    height:auto;
+    display: inline-block;
+    margin:0;
+    padding:0;
+	left: 10%;
+	top: 15%;
+}
+.slider{
+    width: 100%;
+    height: 30%;
+    background-color: #0E3B43;
+    color: #FFFFFF;
+	text-align: center;
+}
+footer{
+    color: #0E3B43;
+    padding-left: 3em;
+}
+.shadow{
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+}
+
+canvas{
+	postion:absolute;
+	top:20%;
+	left:25%;
+	border-radius: 5em;
+	margin: 0;
+	width:30%;
+	height:auto;
+	background-image: url('../Assets/mask.png');
+	background-size:contain;
+}
+section{
+	width:100%;
+	text-align:center;
+	overflow: hidden;
+}
+#forpads{
+	position: absolute;
+	float: left;
+	background-color: rgba(0,0,0,0.5);
+	width: 50%;
+	color: #ffffff;
+	margin: 13rem 0 0 -40rem;
+	border-radius: 5em;
+	border: 5px solid #000000;
+}
+#stretch{
+	margin: 0 70rem 0 70rem;
+}
+#mybutton{
+	position:relative;
+}
+#instagallery{
+	width:30%;
+	position: absolute;
+	top:15%;
+	left:10%;
+	height: auto;
+	opacity:0;
+    transition: opacity 2s;
+}
+#fill{
+	margin:0;
+	padding-left:27rem;
+	padding-right:120rem;
+	padding-top:-3%;
+	padding-bottom:60rem;
+}
+.noverflow{
+	overflow:hidden;
+}
+.icon{
+	width: 50px;
+}  
+#contacts{
+	text-align: justify;
+	width:28%;
+}
+#just{
+	text-align: justify;
+}
+iframe{
+	width:100%;
+	position: absolute;
+	height: 40%;
+}
+#mask{
+	height:100%;
+	background-color: #546a7b; 
+}
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 799px){
+	body{
+		font-family: 'Raleway', sans-serif;
+		background-color: #546a7b;
+		color: #000000;
+		text-align:center;
+		text-decoration:none;
+		margin:0;
+	}
+	header{
+    background-color: #0D1F2D;
+    color: #FFFFFF;
+    width: 100%;
+    height: 10%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 0;
+    display: block;
+	text-align: left;
+
+}
+	nav{
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    width: 49%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    margin: 1em;
+}
+.active{
+	font-weight:bold;
+}
+.highlight{
+    font-family: 'Poiret One', cursive;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+	#fingergun{
+		width:80%;
+	}
+	#instagallery{
+		width:90%;
+		opacity:0;
+		transition: opacity 2s;
+	}
+	canvas{
+	width:80%;	
+	background-image: url('../Assets/mask.png');
+	background-size:contain;
+	}
+}
