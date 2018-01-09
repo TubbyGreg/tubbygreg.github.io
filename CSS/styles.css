@@ -249,4 +249,7 @@ a{
 	#mask{
 		overflow:hidden;
 	}
+	.icon{
+		width: 5%;
+	}
 }
