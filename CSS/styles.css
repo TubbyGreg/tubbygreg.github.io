@@ -218,9 +218,7 @@ ul{
 	padding:0;
 }
 li{
-	margin:0;
-	margin-top:1em;
-	padding:1;
+	
 	display: inline-block;
 	font-size: 1em;
 }
