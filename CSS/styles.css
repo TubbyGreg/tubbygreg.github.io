@@ -37,7 +37,7 @@ h1{
     height:100%;
     width: 49%;
     display: inline-block;
-    text-align: center-left;
+    text-align: center-left !important;
 }
 .highlight{
     font-family: 'Poiret One', cursive;
