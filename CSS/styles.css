@@ -8,6 +8,10 @@
     position: absolute;
     overflow-y: scroll;
     overflow-x: hidden;
+	
+}
+img{
+	width:80%;
 }
 #wrapper{
 width:100vw;
