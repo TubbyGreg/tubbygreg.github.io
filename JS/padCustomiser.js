@@ -1,19 +1,21 @@
+//Wait until the page has loaded to run the JS
 window.onload = function(){
 	pads();
 }
-
+//Declaring the Variables I us
 var canvas, colour, button, label, size, save;
-var my_context;
+var context;
 var lastX, lastY;
 var mousePressed = false;
+//This is the function main function
 function pads(){
 	console.log("pads fired")
 	
-	
+	//Finds the canvas in the page
 	canvas = document.getElementById('padCanvas');
 	canvas.width = 600;
 	canvas.height = 600;
-	my_context = canvas.getContext("2d");
+	context = canvas.getContext("2d");
 	
 	//save button
 	save = document.getElementById('save');
@@ -46,29 +48,31 @@ function pads(){
 	
 	
 	//Event Listeners
+	//mouse
 	canvas.addEventListener("mousedown",(function(e){
 	mousePressed = true;
 	console.log("draw funct called");
 })
 );
+//touch
 	canvas.addEventListener("touchstart",(function(e){
 	mousePressed = true;
 	console.log("draw funct called");
 })
 );
 
-	
+	//mouse
 	canvas.addEventListener("mouseup",(function(e){
 	mousePressed = false;
 	console.log("draw funct stopped");
 })
 );
+//touch
 	canvas.addEventListener("touchend",(function(e){
 	mousePressed = false;
 	console.log("draw funct stopped");
 })
 );
-	
 	canvas.addEventListener("mouseleave",(function(e){
 	mousePressed = false;
 	console.log("left");
@@ -99,18 +103,19 @@ function pads(){
 	console.log("enter");
 })
 );
-	
+	//clear button event listener
 	button.addEventListener("click",(function(e){
-	my_context.clearRect(0, 0, my_context.canvas.width, my_context.canvas.height);
+	context.clearRect(0, 0, context.canvas.width, context.canvas.height);
 	console.log("cleared");
 })
 );
+	//save button event
 	save.addEventListener("click",(function(e){
 	Save();
 	console.log("saved");
 })
 );
-	
+	//colourpicker event listener
 	colour.addEventListener("click",(function(e){
 	
 	console.log("colour selected");
@@ -118,29 +123,31 @@ function pads(){
 
 	
 ));
+// load button event listener
 	load.addEventListener("click", (function(e){
 		Load(); 
 		console.log("Loaded")
 }
 ));
 }
+//this is the function responsible for drawing on the canvas
 function Draw(x, y, isDown) {
     if (isDown) {
         //check if image is to draw on canvas
-		my_context.beginPath();
-		my_context.strokeStyle = colour.value;
-		my_context.lineWidth = size.value;
-		my_context.lineJoin = "round";
-		my_context.moveTo(lastX,lastY);
-		my_context.lineTo(x-canvas.offsetLeft,y-canvas.offsetTop);
-		my_context.closePath();
-		my_context.stroke();
+		context.beginPath();
+		context.strokeStyle = colour.value;
+		context.lineWidth = size.value;
+		context.lineJoin = "round";
+		context.moveTo(lastX,lastY);
+		context.lineTo(x-canvas.offsetLeft,y-canvas.offsetTop);
+		context.closePath();
+		context.stroke();
     }
 	//must upate lastx and y to use for move to and line to
     lastX = x-canvas.offsetLeft;
     lastY = y-canvas.offsetTop;
 }
-
+//save function
 function Save(){
 	console.log(canvas.toDataURL());
 	var image = canvas.toDataURL();
@@ -151,7 +158,7 @@ function Save(){
 				localStorage.setItem("colour", colour.value)
 				localStorage.setItem("size", size.value)
 }
-
+//load function
 function Load(){
 	
 		colour.value = localStorage.getItem("colour");
@@ -159,7 +166,7 @@ function Load(){
 		var image = new Image();
 		image.src = localStorage.getItem("canvas");
 		image.onload = function () {
-			my_context.drawImage(image, 0, 0, canvas.width, canvas.height);
+			context.drawImage(image, 0, 0, canvas.width, canvas.height);
 		console.log("load success");
 }}
 

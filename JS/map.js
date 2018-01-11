@@ -1,6 +1,8 @@
+//wiat until page is loaded to run js
 window.onload = function(){
 	map();
 }
+//map function
 function map() {
 	console.log("Map Fired");
     var maploc = {
