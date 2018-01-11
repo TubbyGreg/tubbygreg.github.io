@@ -13,9 +13,6 @@
 img{
 	width:80%;
 }
-#mybutton{
-	width:100px;
-}
 #wrapper{
 width:100vw;
 height:100vh;
@@ -141,6 +138,7 @@ section{
 }
 #mybutton{
 	position:relative;
+	width:100px;
 }
 #instagallery{
 	width:30%;
