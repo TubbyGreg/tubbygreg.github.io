@@ -138,7 +138,7 @@ section{
 }
 #mybutton{
 	position:relative;
-	width:100px;
+	width:100px !important;
 }
 #instagallery{
 	width:30%;
